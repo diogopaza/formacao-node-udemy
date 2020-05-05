@@ -27,3 +27,14 @@ app.get('/blog/:artigo?', (req, res) => {
     }
     res.send("estou no blog ")    
 })
+/*query params*/
+app.get('/query', (req, res) => {
+    var parametros = req.query["param"]
+    console.log(parametros)
+    if(parametros){
+        res.send("Tem parametros")
+        return
+    }
+   res.send("Não tem parametros")    
+})
+
